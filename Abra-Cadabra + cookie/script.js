@@ -1,4 +1,5 @@
-let buttons = document.querySelector('#button');
+// Все созданные глобальные переменные 
+let createDiv = document.querySelector('#createElementbutton'); 
 let save = document.querySelector('#save');
 let use = document.querySelector('#use');
 let delet = document.querySelector('#delet');
@@ -10,8 +11,12 @@ let offsetX = 0;
 let offsetY = 0;
 let cookie = [];
 
-buttons.addEventListener('click', cb);
+createDiv.addEventListener('click', cb); // обработчик событий, создания новых Div
+save.addEventListener('click', cb1); // обработчик событий, сохранения состояния всех Div в Cookie
+use.addEventListener('click', cb2); // обработчик событий, вост. всех Div, по инструкции - Cookie 
+delet.addEventListener('click', cb3); // обработчик событий, удаления сущ. Cookie
 
+// Начало реализации D&D
 body.addEventListener('mousedown', e => {
   if (e.nodeName != "BUTTON") {
   activeElement = e.target;
@@ -30,24 +35,17 @@ document.addEventListener('mousemove', e => {
     activeElement.style.left = (e.clientX - offsetX) + 'px';
   }
 });
+// Конец реализации D&D
 
-save.addEventListener('click', cb1);
-use.addEventListener('click', cb2);
-delet.addEventListener('click', cb3);
 
-function cb(e) { // create new random Div
-  let newDiv = document.createElement("div");
+function cb(e) { // create new random Div function
+  let newDiv = document.createElement("div"); 
 
   newDiv.setAttribute("name", counter++);
-  newDiv.style.background = rand(colors);
-  newDiv.style.border = '1px solid black'; 
-  newDiv.style.width = randPx() + 'px';
-  newDiv.style.height = randPx() + 'px';
-  newDiv.style.position = 'absolute';
+  newDiv.style = `background: ${rand(colors)}; border:1px solid black;width:${randPx()}px;height:${randPx()}px;position:absolute;`;
   newDiv.style.top = Math.floor(Math.random() * screen.availHeight - newDiv.style.height.replace(/[A-Za-zА-Яа-яЁё]/g, "")) + 'px';
   newDiv.style.left = Math.floor(Math.random() * screen.availWidth - newDiv.style.width.replace(/[A-Za-zА-Яа-яЁё]/g, "")) + 'px';
-  document.body.insertBefore(newDiv, button);
-  
+  document.body.insertBefore(newDiv, createDiv);
   
   function randPx(){
     return Math.floor(Math.random() * 501);
@@ -81,24 +79,29 @@ function cb1() { // save Div positions to cookie
 function cb2() { // use saved cookie
   if(readCookie('param')){
     let load = readCookie('param');
+    
     for(let i = 0; i < load.length; i++) {
       if(load[i] == '`') {
         load = load.replace("`", ";");
       }
     }
+    
     load = load.split('&&');
-    console.log(load);
     
     for(let i = 1; i < counter; i++) {
       let current = document.getElementsByName(i);
-      let attribute = current[0].setAttribute('style', load[i-1]);
+      current[0].setAttribute('style', load[i-1]);
 
+      if(current[0].style[0] == "") {
+        current[0].remove();
+        counter = i;
+
+      }
     }
   }
 }
 
 function cb3() { // delet cookie
-  let load = readCookie('');
     document.cookie ='param=; expires=Thu, 01 Jan 1970 00:00:01   GMT;';
 }
 
