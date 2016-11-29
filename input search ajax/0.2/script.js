@@ -3,16 +3,11 @@ let matches = document.querySelector('#matches'); // div с совпадение
 let respond = []; // ответ ajax 
 let pressTrue; // ввели в input ?
 let valueInput = []; // значение ввода в input
-let b = 0;
-let b1 = 0;
 myInput.value = "search...";
 
 myInput.addEventListener('keyup', cb1);
 myInput.addEventListener('focus', cb2);
- 
-    for(let i = 0; i < respond.length; i++) {
-      filterRespond.push(respond[i].slice(0, valueInput[0].length)); // нарезаем ответы на правильное кол-во символов == введенных символов
-    }
+
 function cb1() {
   valueInput = myInput.value; // получаем значение INPUT
 
