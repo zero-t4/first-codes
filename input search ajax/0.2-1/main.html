@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <style>
+    html {
+    height: 100%;
+    font: 20px Calibri;
+    box-sizing: border-box;
+    }
+    #myInput {
+      top: 30%;
+      left: 50%;
+      width: 50%;
+      position: absolute;
+      margin-left: -23%;
+      font: 33px Calibri;
+      background: #9FF;
+    }
+    #matches {
+      top: 39%;
+      left: 27%;
+      position: absolute;
+    }
+    .li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+  </style>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js" ></script>
+</head>
+<body>
+  <input id="myInput">
+  <div id="results"></div>
+  
+  <script id="matches" type="text/x-handlebars-template">
+    <ul>
+      {{#each list}}
+        <li class="li" name={{name}}>{{name}}</li>
+      {{/each}}
+    </ul>
+  </script>
+  <script src="script.js" ></script>
+</body>
+</html>
