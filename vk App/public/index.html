@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="http://vk.com/js/api/openapi.js" type="text/javascript"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+    <div id="header"></div>
+
+    <div class="btn-group btn-group-lg">
+        <button type="button" class="btn btn-default" onclick="Router.handle('music')">Музыка</button>
+        <button type="button" class="btn btn-default" onclick="Router.handle('friends')">Друзья</button>
+        <button type="button" class="btn btn-default" onclick="Router.handle('news')">Новости</button>
+        <button type="button" class="btn btn-default" onclick="Router.handle('groups')">Группы</button>
+        <button type="button" class="btn btn-default" onclick="Router.handle('photos')">Фото</button>
+    </div>
+    <hr>
+    <div id="results"></div>
+</div>
+
+<script src="model.js"></script>
+<script src="view.js"></script>
+<script src="controller.js"></script>
+<script src="router.js"></script>
+<script src="entry.js"></script>
+
+<script type="text/x-handlebars-template" id="headerTemplate">
+    <h1>Данные из VK-аккаунта: {{first_name}} {{last_name}}</h1>
+</script>
+
+<script type="text/x-handlebars-template" id="musicTemplate">
+    <ul class="list-group" id="audioList">
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-xs-10">
+                    <span class="title">Аудио доступно на vk.com - и в официальных приложениях <a href="http://vk.com">ВКонтакте</a></span>
+                </div>
+                <div class="col-xs-2 text-right">00:25</div>
+            </div>
+        </li>
+    </ul>
+</script>
+
+<script type="text/x-handlebars-template" id="friendsTemplate">
+    <div id="friendsList">
+        {{#each list}}
+        <div class="friend text-center">
+            <a href="http://vk.com/id{{{id}}}" target="_blank"><img src="{{photo_100}}" class="img-circle"></a>
+            <div>{{first_name}}<br>{{last_name}}</div>
+        </div>
+        {{/each}}
+    </div>
+</script>
+
+<script type="text/x-handlebars-template" id="newsTemplate">
+    <div class="news">
+        {{#each list}}
+        {{#if text}}
+        <div class="post">
+            <b>{{formatDate date}}</b>
+            <div class="post-text">{{{text}}}</div>
+        </div>
+        <hr>
+        {{/if}}
+        {{/each}}
+    </div>
+</script>
+
+<script type="text/x-handlebars-template" id="groupsTemplate">
+    <div class="groups">
+        {{#each list}}
+        <div class="group">
+            <img src="{{photo_200}}">
+            <div class="group-name"><a href="http://vk.com/club{{{id}}}" target="_blank">{{{name}}}</a></div>
+        </div>
+        <hr>
+        {{/each}}
+    </div>
+</script>
+
+<script type="text/x-handlebars-template" id="photosTemplate">
+    <div class="photos">
+        {{#each list}}
+        <div class="photos-each">
+            <img src="{{photo_604}}">
+            <span class="glyphicon glyphicon-heart"></span><p>Likes - {{likes.count}}</p><br>
+            <span class="glyphicon glyphicon-share-alt"></span><p>Репостов - {{reposts.count}}</p><br>
+            {{#if commentsCount}}
+                <span class="glyphicon glyphicon-comment"></span><p>Комментариев - {{commentsCount.length}}</p><br>
+              {{#each commentsCount}}
+                <div class="comment">
+                  <img src="{{photo_50}}">
+                  <span class="comment Name">{{first_name}} {{last_name}}: {{text}}</span>
+                  <span class="comment date">{{formatTime date}}</span>
+                  <div class="clearfix"></div>
+                </div>
+              {{/each}}
+            {{else}}
+              <span class="glyphicon glyphicon-comment"></span><p>К этому фото нет комментариев.</p><br>
+            {{/if}}
+            
+        </div>
+        <hr>
+        {{/each}}
+        <div class="clearfix"></div>
+    </div>
+</script>
+</body>
+</html>
