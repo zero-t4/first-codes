@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   background: yellow;
-  font-family: calibri;
+  font-family: calibri, Arial;
 }
 html, body {
   width: 100%;
@@ -24,8 +24,7 @@ html, body {
   content: ".";
   font-size: 160px;
   vertical-align: top;
-  display: block;
-  margin: -275px 0px 0px 133px;
+
 }
 .AnotherSide {
   font-size: 40px;

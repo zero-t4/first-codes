@@ -3,6 +3,10 @@ window.onload = function() {
     let birthDate = +prompt("Whats your birthDate Day?", 29);
     let birthMonth = +prompt("Whats your birthDate Month?", 06);
     let birthYear = +prompt("Whats your birthDate Year?", 1997);
+    if (birthDate == 0 || birthMonth == 0 || birthYear == 0) {
+      alert('Entered the wrong data');
+      throw "stop";
+    }
     if (isNaN(birthDate) || isNaN(birthMonth) || isNaN(birthYear)) {
       alert('Entered the wrong data');
       throw "stop";
