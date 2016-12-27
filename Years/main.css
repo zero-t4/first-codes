@@ -3,7 +3,6 @@
   padding: 0;
   background: yellow;
   font-family: calibri;
-  display: inline-block;
 }
 html, body {
   width: 100%;
@@ -12,12 +11,14 @@ html, body {
 .container {
   top: 35%;
   position: absolute;
-  left: 45%;
+  left: 40%;
+  display: inline-block;
 
 }
 .Years {
   font-size: 140px;
   z-index: 2;
+  display: inline-block;
 }
 .Years:after {
   content: ".";
@@ -29,4 +30,5 @@ html, body {
 .AnotherSide {
   font-size: 40px;
   z-index: 1;
+  display: inline-block;
 }
