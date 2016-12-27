@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  background: yellow;
+  font-family: calibri;
+  display: inline-block;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  top: 35%;
+  position: absolute;
+  left: 45%;
+
+}
+.Years {
+  font-size: 140px;
+  z-index: 2;
+}
+.Years:after {
+  content: ".";
+  font-size: 160px;
+  vertical-align: top;
+  display: block;
+  margin: -275px 0px 0px 133px;
+}
+.AnotherSide {
+  font-size: 40px;
+  z-index: 1;
+}
