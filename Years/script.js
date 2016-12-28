@@ -22,14 +22,15 @@ window.onload = function() {
 
     currentYear = now.getFullYear() - d.getFullYear();
     document.querySelector('.Years').innerHTML = currentYear;
+    document.querySelector('.Dot').innerHTML = ".";
 
     let dMilliseconds =  +d + currentYear * 365 * 24 * 60 * 60 * 1000;
     setInterval(() => {
       let now = Date.now();
       now = now - dMilliseconds;
       now = now/31536000000 + '';
-      now = now.slice(2);
-      document.querySelector('.AnotherSide').innerHTML = now;
+      now = +now.slice(2,18);
+      document.querySelector('.AnotherSide').innerHTML = now
     }, 700)
   }
   startApp();
