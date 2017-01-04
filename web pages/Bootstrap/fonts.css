@@ -1,0 +1,10 @@
+@font-face {
+	font-family: "glyphicons-halflings-regular";
+	src: url("bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot");
+	src: url("bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"),
+			 url("bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot.woff") format("woff"),
+			 url("bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot.woff2") format("woff2"),
+			 url("bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
