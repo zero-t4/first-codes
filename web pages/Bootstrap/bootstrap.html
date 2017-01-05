@@ -12,6 +12,253 @@
     <link rel="stylesheet" href="media.css">
   </head>
   <body>
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Класс "container-fluid" - адаптивный контейнер -->
+    <div class="container-fluid">
+      <!-- Блок с кнопкой "Brand" и кнопкой для развертывания меню (для мобильных устройств) -->
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Bootstrap</a>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <!-- Набор иконок для кнопки -->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <!-- Набор ссылок навигации, форм и других элементов меню (в мобильном устройстве будет находится в раскрывающеемся списке) -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tables<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a target="_blank" href="subPages/tables/001_basic_example.html">basic_example</a></li>
+              <li><a target="_blank" href="subPages/tables/002_striped_rows.html">striped_rows</a></li>
+              <li><a target="_blank" href="subPages/tables/003_bordered_table.html">bordered_table</a></li>
+              <li><a target="_blank" href="subPages/tables/004_hover_rows.html">hover_rows</a></li>
+              <li><a target="_blank" href="subPages/tables/005_condensed_table.html">condensed_table</a></li>
+              <li><a target="_blank" href="subPages/tables/006_contextual_classes.html">contextual_classes</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Forms<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a target="_blank" href="subPages/forms/001_basic_example.html">basic_example</a></li>
+              <li><a target="_blank" href="subPages/forms/002_inline_form.html">inline_form</a></li>
+              <li><a target="_blank" href="subPages/forms/003_horizontal_form.html">horizontal_form</a></li>
+              <li><a target="_blank" href="subPages/forms/004_static_control.html">static_control</a></li>
+              <li><a target="_blank" href="subPages/forms/005_input_focus.html">input_focus</a></li>
+              <li><a target="_blank" href="subPages/forms/006_disabled_inputs.html">disabled_inputs</a></li>
+              <li><a target="_blank" href="subPages/forms/007_readonly_inputs.html">readonly_inputs</a></li>
+              <li><a target="_blank" href="subPages/forms/008_validation_states.html">validation_states</a></li>
+              <li><a target="_blank" href="subPages/forms/009_control_sizing.html">control_sizing</a></li>
+              <li><a target="_blank" href="subPages/forms/010_help_text.html">help_text</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">images<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a target="_blank" href="subPages/images/001_responsive_images.html"></a></li>
+              <li><a target="_blank" href="subPages/images/002_image_shapes.html"></a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">glyphicons<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a target="_blank" href="subPages/glyphicons/001_intro.html">intro</a></li>
+              <li><a target="_blank" href="subPages/glyphicons/002_how_to_use.html">how_to_use</a></li>
+              <li><a target="_blank" href="subPages/glyphicons/003_example.html">example</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">dropdowns<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a target="_blank" href="subPages/dropdowns/001_basic_example.html">basic_example</a></li>
+              <li><a target="_blank" href="subPages/dropdowns/002_headers.html">headers</a></li>
+              <li><a target="_blank" href="subPages/dropdowns/003_disabled_menu_items.html">disabled_menu_items</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">button_groups<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a target="_blank" href="subPages/button_groups/001_basic_example.html">basic_example</a></li>
+              <li><a target="_blank" href="subPages/button_groups/002_button_toolbar.html">button_toolbar</a></li>
+              <li><a target="_blank" href="subPages/button_groups/003_sizing.html">sizing</a></li>
+              <li><a target="_blank" href="subPages/button_groups/004_nesting.html">nesting</a></li>
+              <li><a target="_blank" href="subPages/button_groups/005_vertical_variation.html">vertical_variation</a></li>
+              <li><a target="_blank" href="subPages/button_groups/006_justified_button_groups.html">justified_button_groups</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">button_dropdowns<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a target="_blank" href="subPages/button_dropdowns/001_single_button_dropdowns.html">single_button_dropdowns</a></li>
+              <li><a target="_blank" href="subPages/button_dropdowns/002_split_button_dropdowns.html">split_button_dropdowns</a></li>
+              <li><a target="_blank" href="subPages/button_dropdowns/003_sizing.html">sizing</a></li>
+              <li><a target="_blank" href="subPages/button_dropdowns/004_dropup_variation.html">dropup_variation</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">input_groups<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a target="_blank" href="subPages/input_groups/001_basic_example.html">basic_example</a></li>
+              <li><a target="_blank" href="subPages/input_groups/002_sizing.html">sizing</a></li>
+              <li><a target="_blank" href="subPages/input_groups/003_checkboxes_and_radio_addons.html">checkboxes_and_radio_addons</a></li>
+              <li><a target="_blank" href="subPages/input_groups/004_button_addons.html">button_addons</a></li>
+              <li><a target="_blank" href="subPages/input_groups/005_buttons_with_dropdowns.html">buttons_with_dropdowns</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">navs<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a target="_blank" href="subPages/navs/001_tabs.html">tabs</a></li>
+              <li><a target="_blank" href="subPages/navs/002_pills.html">pills</a></li>
+              <li><a target="_blank" href="subPages/navs/003_justified.html">justified</a></li>
+              <li><a target="_blank" href="subPages/navs/004_disabled_links.html">disabled_links</a></li>
+              <li><a target="_blank" href="subPages/navs/005_using_dropdowns.html">using_dropdowns</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">navbar<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a target="_blank" href="subPages/navbar/001_default_navbar.html">default_navbar</a></li>
+              <li><a target="_blank" href="subPages/navbar/002_forms.html">forms</a></li>
+              <li><a target="_blank" href="subPages/navbar/003_buttons.html">buttons</a></li>
+              <li><a target="_blank" href="subPages/navbar/004_text.html">text</a></li>
+              <li><a target="_blank" href="subPages/navbar/005_nav_links.html">nav_links</a></li>
+              <li><a target="_blank" href="subPages/navbar/006_fixed_to_top.html">fixed_to_top</a></li>
+              <li><a target="_blank" href="subPages/navbar/007_fixed_to_bottom.html">fixed_to_bottom</a></li>
+              <li><a target="_blank" href="subPages/navbar/008_inverted_navbar.html">inverted_navbar</a></li>
+            </ul>
+          </li>
+        </ul>
+<ul class="nav navbar-nav">
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">JavaScript<span class="caret"></span></a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+
+      <li class="dropdown-submenu">
+         <a href="#" class="dropdown-toggle" data-toggle="dropdown">bredcrumbs</span></a>
+         <ul class="dropdown-menu" role="menu">
+           <li><a target="_blank" href="subPages/001_bredcrumbs/001_breadcrumbs.html">breadcrumbs</a></li>
+         </ul>
+      </li>
+
+      <li class="dropdown-submenu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">pagination</span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a target="_blank" href="subPages/002_pagination/001_default_pagination.html">default_pagination</a></li>
+          <li><a target="_blank" href="subPages/002_pagination/002_disabled_and_active_states.html">disabled_and_active_states</a></li>
+          <li><a target="_blank" href="subPages/002_pagination/003_sizing.html">sizing</a></li>
+          <li><a target="_blank" href="subPages/002_pagination/004_pager.html">pager</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown-submenu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">labels</span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a target="_blank" href="subPages/003_labels/001_example.html">example</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown-submenu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">badges</span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a target="_blank" href="subPages/004_badges/001_example.html">example</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown-submenu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">jumbotron</span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a target="_blank" href="subPages/005_jumbotron/001_example.html">example</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown-submenu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">page_header</span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a target="_blank" href="subPages/006_page_header/001_example.html">example</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown-submenu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">thumbnails</span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a target="_blank" href="subPages/007_thumbnails/001_default_example.html">default_example</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown-submenu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">alerts</span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a target="_blank" href="subPages/008_alerts/001_example.html">example</a></li>
+          <li><a target="_blank" href="subPages/008_alerts/002_dismissible_alerts.html">dismissible_alerts</a></li>
+          <li><a target="_blank" href="subPages/008_alerts/003_links_in_alerts.html">links_in_alerts</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown-submenu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">progress_bars</span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a target="_blank" href="subPages/009_progress_bars/001_basic_example.html">basic_example</a></li>
+          <li><a target="_blank" href="subPages/009_progress_bars/002_with_label.html">with_label</a></li>
+          <li><a target="_blank" href="subPages/009_progress_bars/003_low_percentages.html">low_percentages</a></li>
+          <li><a target="_blank" href="subPages/009_progress_bars/004_contextual_alternatives.html">contextual_alternatives</a></li>
+          <li><a target="_blank" href="subPages/009_progress_bars/005_striped.html">striped</a></li>
+          <li><a target="_blank" href="subPages/009_progress_bars/006_animated.html">animated</a></li>
+          <li><a target="_blank" href="subPages/009_progress_bars/007_stacked.html">stacked</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown-submenu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">list_groups</span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a target="_blank" href="subPages/010_list_groups/001_basic_example.html">basic_example</a></li>
+          <li><a target="_blank" href="subPages/010_list_groups/002_badges.html">badges</a></li>
+          <li><a target="_blank" href="subPages/010_list_groups/003_linked_items.html">linked_items</a></li>
+          <li><a target="_blank" href="subPages/010_list_groups/004_disabled_items.html">disabled_items</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown-submenu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">panels</span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a target="_blank" href="subPages/011_panels/001_basic_example.html">basic_example</a></li>
+          <li><a target="_blank" href="subPages/011_panels/002_panel_with_heading.html">panel_with_heading</a></li>
+          <li><a target="_blank" href="subPages/011_panels/003_panel_with_footer.html">panel_with_footer</a></li>
+          <li><a target="_blank" href="subPages/011_panels/004_contextual_alternatives.html">contextual_alternatives</a></li>
+          <li><a target="_blank" href="subPages/011_panels/005_with_tables.html">with_tables</a></li>
+          <li><a target="_blank" href="subPages/011_panels/006_with_list_groups.html">with_list_groups</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown-submenu">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Javascript_widgets</span></a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a target="_blank" href="subPages/012_javascript_widgets/001_togglable_tabs.html">togglable_tabs</a></li>
+          <li><a target="_blank" href="subPages/012_javascript_widgets/002_tooltips.html">tooltips</a></li>
+          <li><a target="_blank" href="subPages/012_javascript_widgets/003_tooltips_info.html">tooltips_info</a></li>
+          <li><a target="_blank" href="subPages/012_javascript_widgets/004_popovers.html">popovers</a></li>
+          <li><a target="_blank" href="subPages/012_javascript_widgets/005_popovers_info.html">popovers_info</a></li>
+          <li><a target="_blank" href="subPages/012_javascript_widgets/006_simple_carousel.html">simple_carousel</a></li>
+          <li><a target="_blank" href="subPages/012_javascript_widgets/007_carousel_with_text.html">carousel_with_text</a></li>
+        </ul>
+      </li>
+
+    </ul>
+  </li>
+</ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
     <div class="container">
       <h1>Grid options</h1>
       <div class="row">
@@ -509,11 +756,7 @@ To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
     </div>
   </div>
 </div>
-<div class="row">
-  <h1 style="text-align: center;">the best way to learn Tables - <a href="http://getbootstrap.com/css/#tables">click here</a></h1>
-  <hr>
-  <h1 style="text-align: center;">the best way to learn Forms - <a href="http://getbootstrap.com/css/#Forms">click here</a></h1>
-</div>
+
 <div class="row">
   <h1>Button</h1>
   <div class="col-md-6">
@@ -568,9 +811,72 @@ To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
   </div>
 
 </div>
-
-
-
+<div class="row">
+  <div class="col-md-2">
+    <p class="text-muted">text-muted</p>
+    <p class="text-primary">text-primary</p>
+    <p class="text-success">text-success</p>
+    <p class="text-info">text-info</p>
+    <p class="text-warning">text-warning</p>
+    <p class="text-danger">text-danger</p>
+  </div>
+  <div class="col-md-4 col-md-pull-1">
+   <pre>
+&#x3C;p class=&#x22;text-muted&#x22;&#x3E;text-muted&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-primary&#x22;&#x3E;text-primary&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-success&#x22;&#x3E;text-success&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-info&#x22;&#x3E;text-info&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-warning&#x22;&#x3E;text-warning&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-danger&#x22;&#x3E;text-danger&#x3C;/p&#x3E;
+    </pre>
+  </div>
+  <div class="col-md-2 col-md-pull-1">
+    <p class="bg-muted">bg-muted</p>
+    <p class="bg-primary">bg-primary</p>
+    <p class="bg-success">bg-success</p>
+    <p class="bg-info">bg-info</p>
+    <p class="bg-warning">bg-warning</p>
+    <p class="bg-danger">bg-danger</p>
+  </div>
+  <div class="col-md-4 col-md-pull-1">
+   <pre>
+&#x3C;p class=&#x22;bg-muted&#x22;&#x3E;bg-muted&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;bg-primary&#x22;&#x3E;bg-primary&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;bg-success&#x22;&#x3E;bg-success&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;bg-info&#x22;&#x3E;bg-info&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;bg-warning&#x22;&#x3E;bg-warning&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;bg-danger&#x22;&#x3E;bg-danger&#x3C;/p&#x3E;
+    </pre>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<hr>
+<div class="row">
+  <button type="button" class="btn btn-primary">
+      Default <span class="caret"></span>     
+  </button>
+</div>
+<br>
+<br>
+<br>
+<hr>
+<div class="row">
+  <div class="pull-left clearfix bg-success btn btn-lg">.pull-left</div>
+  <div class="col-md-4 col-md-push-3 center-block bg-success btn btn-lg">.center-block</div>
+  <div class="pull-right clearfix bg-success btn btn-lg">.pull-right</div>
+</div>
+<div class="row">
+  <div class="panel-body text-center">
+  <div class="center-block"><code>div.panel-body text-center>div.center-block</code></div>
+</div>
+</div>
+<div class="row">
+  <div class="show">.show && .hidden && .invisible</div>
+  <div class="table table-bordered"><div class="hidden">.hidden</div></div>
+  <div class="table table-bordered"><div class="invisible">.invisible</div></div>
+</div>
 </div>
 
 

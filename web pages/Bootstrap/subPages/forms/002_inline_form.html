@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Встроенная форма</title>
+
+    <!--Подключение необходимых файлов-->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+
+        body {
+        
+            padding: 20px;
+        
+        }
+
+        .form-inline {
+        
+            margin-top: 30px;
+            padding: 10px;
+            border: 1px solid black;
+        
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!--Для того, чтобы форма была встроенной (все элементы обтекаемы по левому краю), нужно добавить к ней класс "form-inline". Это сработает только для области просмотра не меньшей 768px.-->
+    <!-- Теги <input>, <textarea> и <select> по умолчанию занимают 100% ширины. Используя встроенные формы Вам нужно будет самостоятельно задавать ширину каждого этого элемента (при уменьшении размера окна браузера). -->
+
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="exampleInputEmail">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-default">Sign in</button>
+    </form>
+
+</body>
+</html>
