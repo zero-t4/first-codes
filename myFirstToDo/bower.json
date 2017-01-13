@@ -1,0 +1,21 @@
+{
+  "name": "nadir",
+  "description": "",
+  "main": "sctipt.js",
+  "authors": [
+    "Nadir Zh."
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/zero-t4/first-codes",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

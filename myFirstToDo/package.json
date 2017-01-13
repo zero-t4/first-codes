@@ -1,0 +1,14 @@
+{
+  "name": "nadir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sctipt.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.8.0"
+  }
+}
