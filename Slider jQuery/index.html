@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ru-Ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Slider</title>
+  <!-- slider style -->
+  <style type="text/css">
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .slider__display {
+    overflow: hidden;
+    width: 600px;
+    height: 300px;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .slider__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .slider__item {
+    top: -100%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slider__item.active {
+    top: 0%;
+  }
+  
+  .slider__item img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .slider__controls-top {
+    margin-left: 50%;
+  }
+  /* --------- slideshow --------- */
+  
+  .slideshow {
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  
+  .slideshow__display {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #000;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .slideshow__display-pic {
+    position: absolute;
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  
+  .slideshow__list {
+    text-align: center;
+  }
+  
+  .slideshow__item {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+  }
+  
+  .slideshow__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .slideshow__link img {
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  
+  #preloader {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: url("Zooey.gif");
+    width: 64px;
+    height: 64px;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="slider">
+        <div class="slider__display">
+          <ul class="slider__list">
+            <li class="slider__item active">
+              <img src="http://lorempixel.com/600/300" alt="">
+            </li>
+            <li class="slider__item">
+              <img src="http://lorempixel.com/600/301" alt="">
+            </li>
+            <li class="slider__item">
+              <img src="http://lorempixel.com/600/302" alt="">
+            </li>
+            <li class="slider__item">
+              <img src="http://lorempixel.com/600/303" alt="">
+            </li>
+          </ul>
+        </div>
+    <div class="slider__controls">
+      <a href="#" class="slider__controls-top">
+                Следующая
+            </a>
+    </div>
+  </div>
+
+
+
+<div class="slideshow">
+    <div class="slideshow__display">
+        <div id="preloader"></div>
+        <img src="img/1.jpeg" alt="" class="slideshow__display-pic">
+    </div>
+    <ul class="slideshow__list">
+        <li class="slideshow__item">
+            <a href="img/1.jpeg" class="slideshow__link">
+                <img src="img/1.jpeg" alt="">
+            </a>
+        </li>
+        <li class="slideshow__item">
+            <a href="http://lorempixel.com/400/200/sports" class="slideshow__link">
+                <img src="img/2.jpeg" alt="">
+            </a>
+        </li>
+        <li class="slideshow__item">
+            <a href="img/3.jpeg" class="slideshow__link">
+                <img src="img/3.jpeg" alt="">
+            </a>
+        </li>
+        <li class="slideshow__item">
+            <a href="img/4.jpeg" class="slideshow__link">
+                <img src="img/4.jpeg" alt="">
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+  <script src="jquery.min.js"></script>
+  <!-- jQuery 3.1.1 -->
+  <script src="main.js"></script>
+</body>
+
+</html>
